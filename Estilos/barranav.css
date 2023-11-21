@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    RedBDV: #bb1b47;
+}
+
+
+/* Primer Menu */
+.marca_logo span{
+    color: white;
+    font-weight: 20px;
+    /* font */
+    font-size: 28px;
+    /* font-family: 'Times New Roman', Times, serif; */
+
+}
+.marca_logo{
+    display: grid;
+    /* fle */
+    align-items: center;
+    align-content: center;
+    padding-left: 2%;
+}
+.Logo{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #bb1b47;
+}
+
+/* Segundo MEnu */
+
+.Funciones{
+    position: relative;
+    width: 100%;
+    height: 48px;
+    background-color: #0067b1;
+}
+.ContainerLista{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.Funciones ul li{
+    list-style: none;
+    padding-left: 30px;
+    margin-top: 8px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* display: grid; */
+    /* align-items: center;
+    align-self: center;
+    align-content: center; */
+}
+
+.Funciones ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* asdasd */
+nav{
+    position: absolute;
+    bottom: 0%;
+    /* background-color: rgb(214, 214, 214); */
+    width: 100%;
+    height: 40px;
+    
+}
+
+#MenuBurguerICon{
+    width: 80px;
+    height: 80px;
+}
+#menuBurguerContainer{
+    
+    display: none;
+    justify-content: center;
+    
+
+}
+#menuBurguerContainer img{
+    display: none;
+    
+    
+      
+
+}
+/* .navbar{
+    position: fixed;
+    top: 0%;
+} */
+
+.barra_lateral{
+    position: none;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background: #0067b1;
+}
+/* Contenido CEntral  */
+#Registros{
+    /* background-color: rgb(143, 105, 105); */
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 4%;
+
+  
+    width: 80%;
+}
+
+.title-Consulta{
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+}
+#TablaCuentas{
+    
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+}
+table tr {
+    background-color: #eee;
+    padding: 10px;
+    margin: 10px;
+}
+tbody tr td{
+    margin: 20px 20px ;
+}
+/* table tr:nth-child(2) {
+    background-color: #eee;
+} */
+table tr:nth-child(even) {
+    background-color: #9e9597;
+}
+
+/* table tr:nth-child(odd) {
+    background-color: #644545;
+} */
+#ListaPErsona{
+
+    margin: 20px;
+}
+.titleTabla{
+    /* margin-bottom: 10px; */
+}
+.titleTabla th{
+    color: white;
+
+    margin-bottom: 100px;
+    /* display: flex; */
+    /* grid-template-rows: 100px 100px 200px 100px; */
+
+}
+
+
+
+
+
+/* Pie de Paginas */
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    right: 0%;
+    height: 60px;
+    background-color: black;
+}
