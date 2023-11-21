@@ -3,9 +3,16 @@
 
 require_once("../Model/Perfil.php");
 
+
+// if(isset($_POST["botonRegistro"])){
+//     echo "si se envio el formulario";
+// }
+
 function Validar($codigo,$cliente,$perfil,$fecha_pago,$pin,$precio_Perfil){
 return !empty($codigo) && !empty($cliente)&& !empty($perfil) && !empty($fecha_pago) && !empty($pin) && !empty($precio_Perfil);
 } 
+function RegistraCuenta(){
+
 
     $codigo =$_POST["Codigo_cuenta"];
     $cliente = $_POST["nombre_cliente"];
@@ -35,9 +42,9 @@ function validarDatos()
             // echo $fechaVencimiento;
         } else {
             echo "no se validaron los datos ";
-            require_once("../View/RegistroCuentas.php");
+            // require_once("../View/RegistroCuentas.php");
             require_once("../View/RegistroPerfiles.php");
         }
     }
 }
-validarDatos();
+// validarDatos();

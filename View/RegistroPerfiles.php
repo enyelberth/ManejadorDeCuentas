@@ -24,6 +24,8 @@ $datos = Cuenta::index();
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <script src="./js/barranav.js"></script>
 
+
+
 </head>
 
 <body id="body">
@@ -73,7 +75,7 @@ $datos = Cuenta::index();
         <div class="Container_Rcuenta">
 
 
-            <form action="../Controller/ControllerPerfil.php" method="POST">
+            <form action="../Controller/ControllerPerfil.php" id="formularioPerfil" method="POST">
                 <h1 class="title_register">!Registra un nuevo Pefil</h1>
                 <br>
                 <br>
@@ -85,10 +87,10 @@ $datos = Cuenta::index();
                     <span>Selecciona la cuenta que quieres agregar el perfil:</span>
                     <br>
                     <!-- <input type="date" name="fechaVencimiento" id="fechaVencimiento"> -->
-                    <select name="Codigo_cuenta" id="Codigo_cuenta" class="selecCuenta">
+                    <select name="Codigo_cuenta" id="Codigo_cuenta" class="selecCuenta" required>
 
                         <?php foreach ($datos as $dato) : ?>
-                        <option value="<?= $dato[" 0"] ?>">
+                        <option value="<?= $dato["0"] ?>">
                             <?= $dato["1"] ?>
                         </option>
 
@@ -110,7 +112,7 @@ $datos = Cuenta::index();
                     <span>Ingresa el Nombre del Cliente:</span>
 
                     <input type="text" name="nombre_cliente" id="nombre_cliente" width="80%"
-                        placeholder="Ingresa el nombre del Cliente">
+                        placeholder="Ingresa el nombre del Cliente" required>
                 </label>
                 <br>
                 <br>
@@ -118,7 +120,7 @@ $datos = Cuenta::index();
                     <span>Ingresa el Nombre del Perfil:</span>
                     <br>
                     <input type="text" name="nombre_perfil" id="nombre_perfil"
-                        placeholder="Ingresa el nombre del Perfil">
+                        placeholder="Ingresa el nombre del Perfil" required>
                 </label>
 
                 <br>
@@ -127,19 +129,19 @@ $datos = Cuenta::index();
                 <label for="pin">
                     <span>Ingresa el PIN del Perfil:</span>
                     <br>
-                    <input type="number" name="pin" id="pin" placeholder="Ingresa el PIN del Perfil ">
+                    <input type="number" name="pin" id="pin" placeholder="Ingresa el PIN del Perfil " required>
                 </label>
                 <br>
                 <br>
                 <br>
                 <label for="fechaVencimiento">
                     <span>Fecha de Vencimiento del perfil:</span>
-                    <input type="date" name="fechaVencimiento" id="fechaVencimiento">
+                    <input type="date" name="fechaVencimiento" id="fechaVencimiento" required>
                 </label>
                 <br>
                 <br>
                 <br>
-                <select name="PrecioCuenta" class="selecCuenta">
+                <select name="PrecioCuenta" class="selecCuenta" id="precio_cuenta" required>
 
                     <option value="1.5">1.5$</option>
                     <option value="2">2$</option>
@@ -166,58 +168,8 @@ $datos = Cuenta::index();
     <footer>
 
     </footer>
-    <!-- <script>
-        $('.btn').click(function() {
-            $(this).toggleClass("click");
-            $('.sidebar').toggleClass("show");
-        });
-        // $('.feat-btn').click(function () {
-        //     $('nav ul .feat-show').toggleClass("show");
-        //     $('nav ul .first').toggleClass("rotate");
-        // });
 
-        $('.serv-btn').click(function() {
-            $('nav ul .serv-show').toggleClass("show1");
-            $('nav ul .second').toggleClass("rotate");
-        });
-        $('.servv-btn').click(function() {
-            $('nav ul .serv-show').toggleClass("show1");
-            $('nav ul .second').toggleClass("rotate");
-        });
-        $('.editar-btn').click(function() {
-            $('nav ul .editar-show').toggleClass("show");
-            // $('nav ul .second').toggleClass("rotate");
-        });
-
-
-        // $('.editar-btn').click(function(){
-        //     $('nav ul .editar-show').toggleClass("show");
-        // });
-        $('nav ul li').click(function() {
-            $(this).addClass("active").siblings().removeClass("active");
-        });
-
-        // Obtén el elemento del menú principal
-        // const menu = document.querySelector('.editar-btn');
-
-        // // Obtén el elemento del subconjunto
-        // const subconjunto = document.querySelector('.editar-show');
-
-        // // Agrega un evento de clic al menú principal
-        // menu.addEventListener('click', () => {
-        //     // Muestra u oculta el subconjunto según su estado actual
-        //     subconjunto.classList.toggle('show');
-        // });
-
-        // let btneditar= document.getElementById("editarr");
-
-        // btneditar.classList("show1");
-    </script> -->
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
-    <!-- <script src="../js/barranav.js"></script> -->
-    <!-- <script src="./js/barranav.js"></script> -->
-
+    <script src="./js/Validacion.js"></script>
 </body>
 
 </html>
